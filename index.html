@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restaurante Japonés</title>
+    <script type="module" crossorigin src="/landing-restaurant/assets/index-Cwd1H7JM.js"></script>
+    <link rel="stylesheet" crossorigin href="/landing-restaurant/assets/index-9opm3K_q.css">
+  </head>
+  <body class="scroll-smooth text-gray-800">
+    <header class="fixed w-full bg-gray-50 shadow z-50">
+      <nav
+        class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center"
+      >
+        <a href="#" class="text-2xl font-bold text-red-600">Hanami</a>
+
+        <!-- Botón hamburger -->
+        <button
+          id="menuBtn"
+          class="md:hidden p-2 rounded hover:bg-gray-100 focus:outline-none focus:ring"
+          aria-label="Abrir menú"
+        >
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+
+        <!-- Menú normal -->
+        <ul id="navMenu" class="hidden md:flex gap-6 font-semibold">
+          <li>
+            <a href="#hero" class="hover:text-red-600"
+              ><i data-lucide="home" class="inline w-5 h-5 mr-1"></i>Inicio</a
+            >
+          </li>
+          <li>
+            <a href="#menu" class="hover:text-red-600"
+              ><i data-lucide="chef-hat" class="inline w-5 h-5 mr-1"></i>Menú</a
+            >
+          </li>
+          <li>
+            <a href="#about" class="hover:text-red-600"
+              ><i data-lucide="badge-info" class="inline w-5 h-5 mr-1"></i
+              >Nosotros</a
+            >
+          </li>
+          <li>
+            <a href="#gallery" class="hover:text-red-600"
+              ><i data-lucide="image" class="inline w-5 h-5 mr-1"></i>Galería</a
+            >
+          </li>
+          <li>
+            <a href="#reviews" class="hover:text-red-600"
+              ><i data-lucide="star" class="inline w-5 h-5 mr-1"></i
+              >Opiniones</a
+            >
+          </li>
+          <li>
+            <a href="#location" class="hover:text-red-600"
+              ><i data-lucide="map-pin" class="inline w-5 h-5 mr-1"></i
+              >Ubicación</a
+            >
+          </li>
+          <li>
+            <a href="#reservation" class="hover:text-red-600"
+              ><i data-lucide="calendar-clock" class="inline w-5 h-5 mr-1"></i
+              >Reservar</a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Menú lateral móvil -->
+      <div
+        id="mobileMenu"
+        class="fixed top-0 left-0 h-full w-64 bg-white shadow-lg transform -translate-x-full transition-transform duration-300 ease-in-out z-50"
+      >
+        <button
+          id="closeMenuBtn"
+          class="p-4 focus:outline-none"
+          aria-label="Cerrar menú"
+        >
+          <i data-lucide="x" class="w-6 h-6"></i>
+        </button>
+        <ul class="flex flex-col gap-6 p-6 text-lg font-semibold">
+          <li>
+            <a
+              href="#hero"
+              class="hover:text-red-600"
+              onclick="closeMobileMenu()"
+              ><i
+                data-lucide="home"
+                class="inline w-6 h-6 mr-2 align-middle"
+              ></i
+              >Inicio</a
+            >
+          </li>
+          <li>
+            <a
+              href="#menu"
+              class="hover:text-red-600"
+              onclick="closeMobileMenu()"
+              ><i
+                data-lucide="chef-hat"
+                class="inline w-6 h-6 mr-2 align-middle"
+              ></i
+              >Menú</a
+            >
+          </li>
+          <li>
+            <a
+              href="#about"
+              class="hover:text-red-600"
+              onclick="closeMobileMenu()"
+              ><i
+                data-lucide="badge-info"
+                class="inline w-6 h-6 mr-2 align-middle"
+              ></i
+              >Nosotros</a
+            >
+          </li>
+          <li>
+            <a
+              href="#gallery"
+              class="hover:text-red-600"
+              onclick="closeMobileMenu()"
+              ><i
+                data-lucide="image"
+                class="inline w-6 h-6 mr-2 align-middle"
+              ></i
+              >Galería</a
+            >
+          </li>
+          <li>
+            <a
+              href="#reviews"
+              class="hover:text-red-600"
+              onclick="closeMobileMenu()"
+              ><i
+                data-lucide="star"
+                class="inline w-6 h-6 mr-2 align-middle"
+              ></i
+              >Opiniones</a
+            >
+          </li>
+          <li>
+            <a
+              href="#location"
+              class="hover:text-red-600"
+              onclick="closeMobileMenu()"
+              ><i
+                data-lucide="map-pin"
+                class="inline w-6 h-6 mr-2 align-middle"
+              ></i
+              >Ubicación</a
+            >
+          </li>
+          <li>
+            <a
+              href="#reservation"
+              class="hover:text-red-600"
+              onclick="closeMobileMenu()"
+              ><i
+                data-lucide="calendar-clock"
+                class="inline w-6 h-6 mr-2 align-middle"
+              ></i
+              >Reservar</a
+            >
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section
+      id="hero"
+      class="relative min-h-screen flex items-center justify-center pt-16 overflow-hidden"
+    >
+      <video
+        autoplay
+        muted
+        loop
+        playsinline
+        class="hidden sm:block absolute w-full h-full object-cover object-center z-0"
+      >
+        <source src="/landing-restaurant/assets/restaurant-background-BLMfZjkZ.mp4" type="video/mp4" />
+      </video>
+
+      <div
+        class="absolute inset-0 sm:hidden bg-[url('/src/assets/restaurant-fallback.jpg')] bg-cover bg-center z-0"
+      ></div>
+
+      <div class="text-center max-w-2xl px-4 relative z-10 text-white">
+        <h1 class="text-4xl md:text-6xl font-bold mb-6">
+          Sabor japonés, fuego y tradición
+        </h1>
+        <p class="text-lg mb-6">
+          Delicados cortes, técnicas ancestrales y el alma del umami. Vive una
+          experiencia culinaria auténtica en cada bocado.
+        </p>
+        <a
+          href="#contact"
+          class="bg-red-600 text-white px-6 py-3 rounded-full hover:bg-red-700 transition"
+        >
+          Reserva ahora
+        </a>
+      </div>
+
+      <div class="absolute inset-0 bg-black opacity-40 z-0"></div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 text-center">
+        <h2 class="text-4xl font-bold text-gray-800 mb-4">Menú Japonés</h2>
+        <p class="text-gray-600 mb-12 max-w-xl mx-auto">
+          Explora los sabores tradicionales de Japón en cada bocado.
+        </p>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Sushi -->
+          <div
+            class="bg-gray-50 p-6 rounded-lg shadow-lg hover:shadow-xl transition"
+          >
+            <img
+              src="https://www.oliveradatenea.com/wp-content/uploads/2023/06/Sushi-rolls-de-salmon-y-Olivada-Olivera-dAtenea.jpg"
+              alt="Sushi"
+              class="w-full h-48 object-cover rounded-md mb-4"
+            />
+            <h3 class="text-xl font-semibold text-gray-800">
+              Sushi Tradicional
+            </h3>
+            <p class="text-gray-600 mt-2">
+              Rollos de arroz y pescado fresco con un toque de wasabi y
+              jengibre.
+            </p>
+            <span class="block mt-4 text-lg font-bold text-red-600">$220</span>
+          </div>
+
+          <!-- Ramen -->
+          <div
+            class="bg-gray-50 p-6 rounded-lg shadow-lg hover:shadow-xl transition"
+          >
+            <img
+              src="https://imagenes.elpais.com/resizer/v2/GFN6EWGETRGUVEQF4HAKSDGLBA.jpg?auth=62962cbf066b589bce0b98b0c8730b5070f68751a169785e7c34064e2df4f403&width=1960&height=1470&smart=true"
+              alt="Ramen"
+              class="w-full h-48 object-cover rounded-md mb-4"
+            />
+            <h3 class="text-xl font-semibold text-gray-800">Ramen Tonkotsu</h3>
+            <p class="text-gray-600 mt-2">
+              Caldo de cerdo con fideos, huevo marinado, alga nori y chashu.
+            </p>
+            <span class="block mt-4 text-lg font-bold text-red-600">$190</span>
+          </div>
+
+          <!-- Tataki -->
+          <div
+            class="bg-gray-50 p-6 rounded-lg shadow-lg hover:shadow-xl transition"
+          >
+            <img
+              src="https://imag.bonviveur.com/presentacion-final-del-tataki-de-salmon.jpg"
+              alt="Tataki de Salmón"
+              class="w-full h-48 object-cover rounded-md mb-4"
+            />
+            <h3 class="text-xl font-semibold text-gray-800">
+              Tataki de Salmón
+            </h3>
+            <p class="text-gray-600 mt-2">
+              Salmón ligeramente sellado y ahumado, servido con salsa ponzu.
+            </p>
+            <span class="block mt-4 text-lg font-bold text-red-600">$260</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-4 max-w-5xl">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold text-gray-800 mb-4">Sobre Nosotros</h2>
+          <p class="text-lg text-gray-600">
+            Más que un restaurante, somos una experiencia culinaria japonesa
+            auténtica. Fusionamos tradición, sabor y arte en cada platillo.
+          </p>
+        </div>
+
+        <div class="flex flex-col md:flex-row items-center gap-10">
+          <div class="md:w-1/2">
+            <img
+              src="https://images.unsplash.com/photo-1568018508399-e53bc8babdde?q=80&w=1174&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="Interior del restaurante"
+              class="w-full h-80 object-cover rounded-lg shadow-lg"
+            />
+          </div>
+          <div class="md:w-1/2">
+            <h3 class="text-2xl font-semibold text-gray-800 mb-4">
+              Nuestra Filosofía
+            </h3>
+            <p class="text-gray-700 leading-relaxed mb-4">
+              En nuestro restaurante, cada ingrediente es seleccionado
+              cuidadosamente para asegurar frescura y autenticidad. Nos apasiona
+              el detalle, desde la técnica de nuestros chefs hasta la
+              presentación del plato en tu mesa.
+            </p>
+            <p class="text-gray-700 leading-relaxed">
+              Ya sea que busques sushi tradicional, platos calientes o una
+              experiencia omakase, te invitamos a sumergirte en el verdadero
+              espíritu de la cocina japonesa.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Galery Section -->
+    <section id="galery" class="py-20 bg-white">
+      <div class="container mx-auto px-4 max-w-7xl">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-10">
+          Galería
+        </h2>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          <div class="overflow-hidden rounded-lg shadow-lg hover:shadow-xl">
+            <img
+              src="https://cdn.pixabay.com/photo/2020/01/06/19/31/japanese-sushi-4746059_960_720.jpg"
+              alt="Sushi fresco"
+              class="w-full h-64 object-cover transform hover:scale-105 transition duration-300"
+            />
+          </div>
+          <div class="overflow-hidden rounded-lg shadow-lg hover:shadow-xl">
+            <img
+              src="https://feyma.com/blog/wp-content/uploads/2024/07/decoracion-restaurante-japones.jpg"
+              alt="Interior del restaurante"
+              class="w-full h-64 object-cover transform hover:scale-105 transition duration-300"
+            />
+          </div>
+          <div class="overflow-hidden rounded-lg shadow-lg hover:shadow-xl">
+            <img
+              src="https://img.freepik.com/fotos-premium/preparando-sashimi-cocina-restaurante_130291-3135.jpg"
+              alt="Chef preparando sashimi"
+              class="w-full h-64 object-cover transform hover:scale-105 transition duration-300"
+            />
+          </div>
+          <div class="overflow-hidden rounded-lg shadow-lg hover:shadow-xl">
+            <img
+              src="https://img.freepik.com/fotos-premium/mesa-oscura-servida-platos-japoneses-estilo-asiatico_219193-2852.jpg"
+              alt="Mesa servida al estilo japonés"
+              class="w-full h-64 object-cover transform hover:scale-105 transition duration-300"
+            />
+          </div>
+          <div class="overflow-hidden rounded-lg shadow-lg hover:shadow-xl">
+            <img
+              src="https://animalgourmet.com/wp-content/uploads/2019/08/japanese-2358861_1920.jpg"
+              alt="Bebidas tradicionales japonesas"
+              class="w-full h-64 object-cover transform hover:scale-105 transition duration-300"
+            />
+          </div>
+          <div class="overflow-hidden rounded-lg shadow-lg hover:shadow-xl">
+            <img
+              src="https://www.ciudaris.com/blog/wp-content/uploads/ideas-decoracion-habitacion-estilo-japones.jpg"
+              alt="Ambiente cálido con decoración japonesa"
+              class="w-full h-64 object-cover transform hover:scale-105 transition duration-300"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-4 max-w-7xl">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">
+          Lo que dicen nuestros clientes
+        </h2>
+
+        <div class="grid gap-8 md:grid-cols-3">
+          <!-- Testimonio 1 -->
+          <div class="bg-white rounded-lg shadow-md p-6">
+            <p class="text-gray-700 mb-4 italic">
+              “Una experiencia increíble. El sushi es el mejor que he probado, y
+              el ambiente te transporta a Japón.”
+            </p>
+            <div class="flex items-center space-x-4 mb-4">
+              <div class="flex text-yellow-400">
+                <i data-lucide="star" class="w-5 h-5"></i>
+                <i data-lucide="star" class="w-5 h-5"></i>
+                <i data-lucide="star" class="w-5 h-5"></i>
+                <i data-lucide="star" class="w-5 h-5"></i>
+                <i data-lucide="star" class="w-5 h-5"></i>
+              </div>
+            </div>
+            <div class="flex items-center space-x-4">
+              <img
+                src="/src/assets/client-1.jpg"
+                alt="Cliente 1"
+                class="w-12 h-12 rounded-full object-cover"
+              />
+              <div>
+                <p class="font-semibold text-gray-800">Mariana López</p>
+                <p class="text-sm text-gray-500">Cliente frecuente</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonio 2 -->
+          <div class="bg-white rounded-lg shadow-md p-6">
+            <p class="text-gray-700 mb-4 italic">
+              “El salmón estaba perfectamente ahumado y los platillos se ven y
+              saben espectaculares. Recomendadísimo.”
+            </p>
+            <div class="flex items-center space-x-4 mb-4">
+              <div class="flex text-yellow-400">
+                <i data-lucide="star" class="w-5 h-5"></i>
+                <i data-lucide="star" class="w-5 h-5"></i>
+                <i data-lucide="star" class="w-5 h-5"></i>
+                <i data-lucide="star" class="w-5 h-5"></i>
+                <i data-lucide="star" class="w-5 h-5"></i>
+              </div>
+            </div>
+            <div class="flex items-center space-x-4">
+              <img
+                src="/src/assets/client-2.jpg"
+                alt="Cliente 2"
+                class="w-12 h-12 rounded-full object-cover"
+              />
+              <div>
+                <p class="font-semibold text-gray-800">Carlos Méndez</p>
+                <p class="text-sm text-gray-500">
+                  Amante de la cocina japonesa
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonio 3 -->
+          <div class="bg-white rounded-lg shadow-md p-6">
+            <p class="text-gray-700 mb-4 italic">
+              “Excelente servicio, comida deliciosa y presentación impecable.
+              ¡Volveremos muy pronto!”
+            </p>
+            <div class="flex items-center space-x-4 mb-4">
+              <div class="flex text-yellow-400">
+                <i data-lucide="star" class="w-5 h-5"></i>
+                <i data-lucide="star" class="w-5 h-5"></i>
+                <i data-lucide="star" class="w-5 h-5"></i>
+                <i data-lucide="star" class="w-5 h-5"></i>
+                <i data-lucide="star" class="w-5 h-5"></i>
+              </div>
+            </div>
+            <div class="flex items-center space-x-4">
+              <img
+                src="/src/assets/client-3.jpg"
+                alt="Cliente 3"
+                class="w-12 h-12 rounded-full object-cover"
+              />
+              <div>
+                <p class="font-semibold text-gray-800">Laura Sánchez</p>
+                <p class="text-sm text-gray-500">Visitante por primera vez</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Location Section -->
+    <section id="location" class="py-20 bg-white">
+      <div class="container mx-auto px-4 max-w-7xl">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-10">
+          ¿Dónde nos encontramos?
+        </h2>
+
+        <div class="flex flex-col md:flex-row md:items-center gap-8">
+          <!-- Mapa -->
+          <div
+            class="w-full md:w-2/3 h-80 rounded-lg overflow-hidden shadow-lg"
+          >
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.595645799077!2d-99.17362718468902!3d19.432607286884207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f92b7793777b%3A0x5f3746e49c08d0b5!2sCiudad%20de%20México!5e0!3m2!1ses!2smx!4v1615792618445!5m2!1ses!2smx"
+              width="100%"
+              height="100%"
+              allowfullscreen=""
+              loading="lazy"
+              class="border-0 w-full h-full"
+            >
+            </iframe>
+          </div>
+
+          <!-- Información -->
+          <div class="w-full md:w-1/3 text-center md:text-left">
+            <h3 class="text-xl font-semibold text-gray-700 mb-2">
+              Restaurante Japonés Hanami
+            </h3>
+            <p class="text-gray-600 mb-4">
+              Calle Ficticia #123, Colonia del Sushi, CDMX, México
+            </p>
+            <p class="text-gray-600 mb-4">
+              Lunes a Domingo: 12:00 PM - 10:00 PM
+            </p>
+            <a
+              href="https://www.google.com/maps/place/Ciudad+de+México/"
+              target="_blank"
+              class="inline-block mt-4 px-5 py-3 bg-red-600 text-white font-medium rounded-lg hover:bg-red-700 transition"
+            >
+              Abrir en Google Maps
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reservas -->
+    <section id="schedule" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-4 max-w-3xl">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-10">
+          Reserva tu mesa
+        </h2>
+
+        <form class="bg-white p-8 rounded-lg shadow-lg space-y-6">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label for="name" class="block text-gray-700 font-medium mb-1"
+                >Nombre completo</label
+              >
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Ej. Juan Pérez"
+                class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-red-400"
+                required
+              />
+            </div>
+            <div>
+              <label for="phone" class="block text-gray-700 font-medium mb-1"
+                >Teléfono</label
+              >
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="+52 55 1234 5678"
+                class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-red-400"
+                required
+              />
+            </div>
+            <div>
+              <label for="date" class="block text-gray-700 font-medium mb-1"
+                >Fecha</label
+              >
+              <input
+                type="date"
+                id="date"
+                name="date"
+                placeholder="Selecciona la fecha"
+                class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-red-400"
+                required
+              />
+            </div>
+            <div>
+              <label for="time" class="block text-gray-700 font-medium mb-1"
+                >Hora</label
+              >
+              <input
+                type="time"
+                id="time"
+                name="time"
+                placeholder="Selecciona la hora"
+                class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-red-400"
+                required
+              />
+            </div>
+            <div class="md:col-span-2">
+              <label for="people" class="block text-gray-700 font-medium mb-1"
+                >Número de personas</label
+              >
+              <input
+                type="number"
+                id="people"
+                name="people"
+                min="1"
+                placeholder="Ej. 2"
+                class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-red-400"
+                required
+              />
+            </div>
+            <div class="md:col-span-2">
+              <label for="notes" class="block text-gray-700 font-medium mb-1"
+                >Comentarios adicionales</label
+              >
+              <textarea
+                id="notes"
+                name="notes"
+                rows="4"
+                placeholder="Ej. Preferencia de mesa o alergias"
+                class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-red-400"
+              ></textarea>
+            </div>
+          </div>
+
+          <div class="text-center">
+            <button
+              type="submit"
+              class="bg-red-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-red-700 transition"
+            >
+              Confirmar reserva
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <footer id="footer" class="bg-white mt-20">
+      <div
+        class="max-w-7xl mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-gray-700"
+      >
+        <!-- Logo y descripción -->
+        <div>
+          <a href="#" class="text-3xl font-bold text-red-600 mb-4 inline-block"
+            >Hanami</a
+          >
+          <p class="max-w-xs">
+            Experiencia culinaria japonesa auténtica, combinando tradición,
+            sabor y arte en cada platillo. Síguenos para más novedades y
+            ofertas.
+          </p>
+        </div>
+
+        <!-- Navegación rápida -->
+        <div>
+          <h3 class="text-xl font-semibold text-gray-800 mb-4">Navegación</h3>
+          <ul class="space-y-2">
+            <li>
+              <a href="#hero" class="hover:text-red-600 transition">Inicio</a>
+            </li>
+            <li>
+              <a href="#menu" class="hover:text-red-600 transition">Menú</a>
+            </li>
+            <li>
+              <a href="#about" class="hover:text-red-600 transition"
+                >Nosotros</a
+              >
+            </li>
+            <li>
+              <a href="#galery" class="hover:text-red-600 transition"
+                >Galería</a
+              >
+            </li>
+            <li>
+              <a href="#reviews" class="hover:text-red-600 transition"
+                >Opiniones</a
+              >
+            </li>
+            <li>
+              <a href="#location" class="hover:text-red-600 transition"
+                >Ubicación</a
+              >
+            </li>
+            <li>
+              <a href="#reservation" class="hover:text-red-600 transition"
+                >Reservar</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Contacto y redes sociales -->
+        <div>
+          <h3 class="text-xl font-semibold text-gray-800 mb-4">Contáctanos</h3>
+          <p class="mb-4">
+            Calle Ficticia #123, Colonia del Sushi, CDMX, México
+          </p>
+          <p class="mb-4">
+            Tel:
+            <a href="tel:+525512345678" class="hover:text-red-600 transition"
+              >+52 55 1234 5678</a
+            >
+          </p>
+          <p class="mb-4">
+            Email:
+            <a
+              href="mailto:contacto@hanami.com"
+              class="hover:text-red-600 transition"
+              >contacto@hanami.com</a
+            >
+          </p>
+
+          <div class="flex space-x-4 mt-4">
+            <a
+              href="#"
+              aria-label="Facebook"
+              class="text-gray-500 hover:text-red-600 transition"
+            >
+              <i data-lucide="facebook" class="w-6 h-6"></i>
+            </a>
+            <a
+              href="#"
+              aria-label="Instagram"
+              class="text-gray-500 hover:text-red-600 transition"
+            >
+              <i data-lucide="instagram" class="w-6 h-6"></i>
+            </a>
+            <a
+              href="#"
+              aria-label="Twitter"
+              class="text-gray-500 hover:text-red-600 transition"
+            >
+              <i data-lucide="twitter" class="w-6 h-6"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="border-t border-gray-200 mt-8 text-center text-gray-500 text-sm"
+      >
+        &copy; 2025 Hanami. Todos los derechos reservados.
+      </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button
+      id="backToTop"
+      class="fixed bottom-4 right-20 bg-red-600 text-white px-4 py-2 rounded-full shadow-lg hover:bg-red-700 hidden z-50"
+    >
+      <i data-lucide="arrow-up" class="w-5 h-5"></i>
+    </button>
+
+    <!-- Botón flotante de WhatsApp -->
+    <a
+      href="https://wa.me/5211234567890"
+      class="fixed bottom-4 right-4 bg-green-500 hover:bg-green-600 text-white rounded-full p-4 shadow-lg z-40"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Chatea con nosotros por WhatsApp"
+    >
+      <i data-lucide="message-circle" class="w-6 h-6"></i>
+    </a>
+  </body>
+</html>
