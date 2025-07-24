@@ -17,6 +17,7 @@ import {
   Image,
   CalendarClock,
   ArrowUp,
+  Twitter,
 } from "lucide";
 
 createIcons({
@@ -36,6 +37,7 @@ createIcons({
     Image,
     CalendarClock,
     ArrowUp,
+    Twitter,
   },
   attrs: {
     class: "stroke-current", // para que tome color desde CSS
