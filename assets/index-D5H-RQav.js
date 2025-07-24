@@ -111,17 +111,22 @@
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
- */const pf=[["path",{d:"M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"}],["path",{d:"M7 2v20"}],["path",{d:"M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"}]];/**
+ */const pf=[["path",{d:"M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"}]];/**
  * @license lucide v0.525.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
- */const gf=[["path",{d:"M18 6 6 18"}],["path",{d:"m6 6 12 12"}]];/**
+ */const gf=[["path",{d:"M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"}],["path",{d:"M7 2v20"}],["path",{d:"M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"}]];/**
  * @license lucide v0.525.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
- */const mf=({icons:a={},nameAttr:e="data-lucide",attrs:r={}}={})=>{if(!Object.values(a).length)throw new Error(`Please provide an icons object.
+ */const mf=[["path",{d:"M18 6 6 18"}],["path",{d:"m6 6 12 12"}]];/**
+ * @license lucide v0.525.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const yf=({icons:a={},nameAttr:e="data-lucide",attrs:r={}}={})=>{if(!Object.values(a).length)throw new Error(`Please provide an icons object.
 If you want to use all the icons you can import it like:
  \`import { createIcons, icons } from 'lucide';
-lucide.createIcons({icons});\``);if(typeof document>"u")throw new Error("`createIcons()` only works in a browser environment.");const t=document.querySelectorAll(`[${e}]`);if(Array.from(t).forEach(i=>$o(i,{nameAttr:e,icons:a,attrs:r})),e==="data-lucide"){const i=document.querySelectorAll("[icon-name]");i.length>0&&(console.warn("[Lucide] Some icons were found with the now deprecated icon-name attribute. These will still be replaced for backwards compatibility, but will no longer be supported in v1.0 and you should switch to data-lucide"),Array.from(i).forEach(n=>$o(n,{nameAttr:"icon-name",icons:a,attrs:r})))}};mf({icons:{Home:af,Star:df,ChefHat:sf,Utensils:pf,MessageCircle:hf,MapPin:ff,PhoneCall:_f,Menu:cf,X:gf,Facebook:of,Instagram:lf,BadgeInfo:rf,Image:uf,CalendarClock:nf,ArrowUp:tf},attrs:{class:"stroke-current"}});Qs.registerPlugin($);const ur=(a,e)=>{Qs.from(a,{scrollTrigger:{trigger:a,start:"top 80%",toggleActions:"play none none none"},duration:1,opacity:0,...e})};ur("nav",{y:-50});ur("#hero",{y:50});ur("#menu",{y:50,stagger:.2});ur("#about",{y:50});ur("#galery",{y:50});ur("#reviews",{x:-50});ur("#location",{scale:.9});ur("#schedule",{y:50});ur("#footer",{y:50,opacity:0,duration:1});const gu=document.getElementById("backToTop");window.addEventListener("scroll",()=>{gu.classList.toggle("hidden",window.scrollY<300)});gu.addEventListener("click",()=>{window.scrollTo({top:0,behavior:"smooth"})});const yf=document.getElementById("menuBtn"),oo=document.getElementById("mobileMenu"),vf=document.getElementById("closeMenuBtn");yf.addEventListener("click",()=>{oo.classList.remove("-translate-x-full")});vf.addEventListener("click",()=>{oo.classList.add("-translate-x-full")});window.closeMobileMenu=()=>{oo.classList.add("-translate-x-full")};
+lucide.createIcons({icons});\``);if(typeof document>"u")throw new Error("`createIcons()` only works in a browser environment.");const t=document.querySelectorAll(`[${e}]`);if(Array.from(t).forEach(i=>$o(i,{nameAttr:e,icons:a,attrs:r})),e==="data-lucide"){const i=document.querySelectorAll("[icon-name]");i.length>0&&(console.warn("[Lucide] Some icons were found with the now deprecated icon-name attribute. These will still be replaced for backwards compatibility, but will no longer be supported in v1.0 and you should switch to data-lucide"),Array.from(i).forEach(n=>$o(n,{nameAttr:"icon-name",icons:a,attrs:r})))}};yf({icons:{Home:af,Star:df,ChefHat:sf,Utensils:gf,MessageCircle:hf,MapPin:ff,PhoneCall:_f,Menu:cf,X:mf,Facebook:of,Instagram:lf,BadgeInfo:rf,Image:uf,CalendarClock:nf,ArrowUp:tf,Twitter:pf},attrs:{class:"stroke-current"}});Qs.registerPlugin($);const ur=(a,e)=>{Qs.from(a,{scrollTrigger:{trigger:a,start:"top 80%",toggleActions:"play none none none"},duration:1,opacity:0,...e})};ur("nav",{y:-50});ur("#hero",{y:50});ur("#menu",{y:50,stagger:.2});ur("#about",{y:50});ur("#galery",{y:50});ur("#reviews",{x:-50});ur("#location",{scale:.9});ur("#schedule",{y:50});ur("#footer",{y:50,opacity:0,duration:1});const gu=document.getElementById("backToTop");window.addEventListener("scroll",()=>{gu.classList.toggle("hidden",window.scrollY<300)});gu.addEventListener("click",()=>{window.scrollTo({top:0,behavior:"smooth"})});const vf=document.getElementById("menuBtn"),oo=document.getElementById("mobileMenu"),xf=document.getElementById("closeMenuBtn");vf.addEventListener("click",()=>{oo.classList.remove("-translate-x-full")});xf.addEventListener("click",()=>{oo.classList.add("-translate-x-full")});window.closeMobileMenu=()=>{oo.classList.add("-translate-x-full")};
