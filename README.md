@@ -61,8 +61,12 @@ Landing page para “Hanami”, un restaurante japonés que ofrece una experienc
 
 ## Contacto
 
-¿Tienes dudas o sugerencias? Escríbeme a [jhonnyestruve@gmail.com](mailto:jhonnyestruve@gmail.com)
+¿Tienes dudas o sugerencias? Escríbeme a [jhonnyestruve@darkmatter-studio.com](mailto:jhonnyestruve@darkmatter-studio.com)
 
 ---
 
-# landing-restaurant
+## Tags
+
+landing-restaurant · darkmatter-studio · vite · tailwindcss · typescript · gsap
+
+---

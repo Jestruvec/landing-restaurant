@@ -65,10 +65,10 @@ animateSection("nav", { y: -50 });
 animateSection("#hero", { y: 50 });
 animateSection("#menu", { y: 50, stagger: 0.2 });
 animateSection("#about", { y: 50 });
-animateSection("#galery", { y: 50 });
+animateSection("#gallery", { y: 50 });
 animateSection("#reviews", { x: -50 });
 animateSection("#location", { scale: 0.9 });
-animateSection("#schedule", { y: 50 });
+animateSection("#contact", { y: 50 });
 animateSection("#footer", { y: 50, opacity: 0, duration: 1 });
 
 // Botón volver arriba
